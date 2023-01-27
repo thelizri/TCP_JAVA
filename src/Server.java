@@ -9,8 +9,8 @@ public class Server {
 
     public Server() throws Exception{
         //Opening port
-        ServerSocket serverSocket = new ServerSocket(2020);
-        System.out.println("Port 2020 has been opened");
+        ServerSocket serverSocket = new ServerSocket(0);
+        System.out.println("Port "+ serverSocket.getLocalPort() + " has been opened");
 
         //Accepting connection
         Socket socket = serverSocket.accept();
